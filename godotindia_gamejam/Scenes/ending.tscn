@@ -1,0 +1,148 @@
+[gd_scene load_steps=12 format=3 uid="uid://flvegd7jk2d2"]
+
+[ext_resource type="Script" uid="uid://d2vft4b1v7p0w" path="res://Scripts/ending.gd" id="1_bfdlc"]
+[ext_resource type="Texture2D" uid="uid://btd5ueee51uk2" path="res://Assets/Pixel background/Pixel background/64x64/3. Color/Picture/color_background_16.png" id="2_bfdlc"]
+[ext_resource type="Texture2D" uid="uid://b2iof7xt8hiu7" path="res://Assets/Evil Wizard/Sprites/Idle - Copy_CursedWizard.png" id="3_hv2aa"]
+[ext_resource type="FontFile" uid="uid://dwfev8y84vg8l" path="res://Assets/Abaddon_Fonts_v1.2/Abaddon_Fonts_v1.2/Abaddon Bold.ttf" id="4_1bcf8"]
+[ext_resource type="FontFile" uid="uid://b162afmb4xvsw" path="res://Assets/Abaddon_Fonts_v1.2/Abaddon_Fonts_v1.2/Abaddon Light.ttf" id="5_ox17v"]
+[ext_resource type="AudioStream" uid="uid://bv041jjq7dp7f" path="res://Assets/music-loop-bundle-download_2024_q4/Sketchbook 2024-11-30.ogg" id="6_bfdlc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xelri"]
+bg_color = Color(1, 0.723797, 0.854268, 1)
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_803yc"]
+bg_color = Color(0.140629, 0.628557, 0.895828, 1)
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uah1q"]
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uah1q"]
+
+[sub_resource type="Environment" id="Environment_bfdlc"]
+background_mode = 3
+background_canvas_max_layer = 1
+glow_enabled = true
+glow_intensity = 2.13
+glow_bloom = 0.17
+glow_hdr_threshold = 2.01
+glow_hdr_scale = 2.42
+glow_hdr_luminance_cap = 0.07
+adjustment_enabled = true
+adjustment_brightness = 0.84
+adjustment_contrast = 2.55
+adjustment_saturation = 1.05
+
+[node name="Ending" type="CanvasLayer"]
+script = ExtResource("1_bfdlc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bfdlc")
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0.604588, 0.663069, 0.976888, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 336.0
+offset_top = -220.0
+offset_right = 470.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.08314
+texture = ExtResource("3_hv2aa")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -504.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = 167.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_1bcf8")
+theme_override_font_sizes/font_size = 120
+text = "The End"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -512.0
+offset_top = 160.0
+offset_right = 512.0
+offset_bottom = 682.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.737193, 0.737193, 0.737193, 1)
+theme_override_colors/font_outline_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+theme_override_fonts/font = ExtResource("5_ox17v")
+theme_override_font_sizes/font_size = 56
+text = "After countless cycles, you track down the wizard, wielding time itself as your weapon. Spells clash and in a final strike, the loop shatters. Time flows again, your curse is broken. But was it fate or
+just another loop beginning?"
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 880.0
+offset_top = 496.0
+offset_right = 1072.0
+offset_bottom = 592.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xelri")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_1bcf8")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxFlat_803yc")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uah1q")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uah1q")
+text = "NEXT"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Ending_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_bfdlc")
+autoplay = true
+bus = &"Menu"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bfdlc")
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,134 @@
+[gd_scene load_steps=9 format=3 uid="uid://b2chkuvu8kp7i"]
+
+[ext_resource type="Script" uid="uid://bysur7bvm0wwd" path="res://Scripts/main_menu.gd" id="1_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://d000tnj5pxf6c" path="res://Assets/Pixel background/Pixel background/64x64/3. Color/Picture/color_background_38.png" id="2_n45e2"]
+[ext_resource type="Texture2D" uid="uid://cmeoteoqtl7me" path="res://Assets/Ui_assets/Cool Text - Chrono Hex 478803009135321.png" id="3_opfnp"]
+[ext_resource type="FontFile" uid="uid://gdr6m0mqgcry" path="res://Assets/ThaleahFat/ThaleahFat.ttf" id="4_cp0ys"]
+[ext_resource type="AudioStream" uid="uid://sw31n5m6upoo" path="res://Assets/music-loop-bundle-download_2024_q4/Sketchbook 2024-12-21.ogg" id="5_n45e2"]
+
+[sub_resource type="Gradient" id="Gradient_n45e2"]
+colors = PackedColorArray(0.288368, 0.0284038, 0.521651, 1, 0.792783, 0.00560887, 0.278374, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(0.694118, 0.0666667, 0.431373, 0.0745098)
+
+[sub_resource type="Environment" id="Environment_n45e2"]
+background_mode = 3
+background_canvas_max_layer = 1
+glow_enabled = true
+glow_intensity = 2.13
+glow_bloom = 0.17
+glow_hdr_threshold = 2.01
+glow_hdr_scale = 2.42
+glow_hdr_luminance_cap = 0.07
+adjustment_enabled = true
+adjustment_brightness = 0.98
+adjustment_contrast = 1.57
+adjustment_saturation = 1.35
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_ce3w2")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_n45e2")
+stretch_mode = 1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(456, -64)
+amount = 150
+lifetime = 1.3
+emission_shape = 3
+emission_rect_extents = Vector2(800, 1)
+gravity = Vector2(400, 980)
+radial_accel_max = 68.69
+angle_max = 100.0
+scale_amount_max = 10.0
+color_ramp = SubResource("Gradient_n45e2")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_n45e2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -284.0
+offset_right = 326.0
+offset_bottom = -124.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_opfnp")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = -84.0
+offset_right = 109.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_cp0ys")
+theme_override_font_sizes/font_size = 72
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = 44.0
+offset_right = 109.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_cp0ys")
+theme_override_font_sizes/font_size = 72
+text = "About"
+
+[node name="Button3" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = 172.0
+offset_right = 109.0
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_cp0ys")
+theme_override_font_sizes/font_size = 72
+text = "EXIT"
+
+[node name="mainmenu_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_n45e2")
+autoplay = true
+bus = &"Menu"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_n45e2")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

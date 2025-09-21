@@ -1,0 +1,210 @@
+[gd_scene load_steps=26 format=3 uid="uid://crwitmlwkk04p"]
+
+[ext_resource type="Texture2D" uid="uid://cwre1cur1ytkg" path="res://Assets/Free Smoke Fx Pixel 2/Free Smoke Fx  Pixel 05.png" id="1_mov3n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mov3n"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1lgx"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(64, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0ewj"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(128, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugs70"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgd5w"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(256, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a54s"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(320, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rgb8"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(384, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ctc7"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(448, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vumfb"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(512, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xpfma"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mov3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1lgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0ewj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugs70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgd5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8a54s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rgb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ctc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vumfb")
+}],
+"loop": true,
+"name": &"Fx",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_mpnsl"]
+resource_name = "Color_shift"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.266667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 1, 1, 1), Color(1, 0.465771, 0.773269, 1), Color(1, 0, 0.45098, 1), Color(0.259841, 1, 0.613719, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l2fmu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cj5bi"]
+_data = {
+&"Color_shift": SubResource("Animation_mpnsl"),
+&"RESET": SubResource("Animation_l2fmu")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpfma"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpnsl"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2fmu"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj5bi"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxewf"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrdyk"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg06h"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3yma"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18tlk"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgsh3"]
+atlas = ExtResource("1_mov3n")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sgsh3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpfma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpnsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2fmu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj5bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxewf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrdyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sg06h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3yma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18tlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgsh3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Loop_effect" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_xpfma")
+animation = &"Fx"
+autoplay = "Fx"
+frame_progress = 0.040387
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cj5bi")
+}
+autoplay = "Color_shift"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+scale = Vector2(0.95, 0.95)
+sprite_frames = SubResource("SpriteFrames_sgsh3")
+autoplay = "default"
+frame_progress = 0.840342

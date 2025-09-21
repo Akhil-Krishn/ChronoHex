@@ -1,0 +1,127 @@
+[gd_scene load_steps=12 format=3 uid="uid://dvf7vpey6c707"]
+
+[ext_resource type="Script" uid="uid://bf2dfwedrgisq" path="res://Scripts/credits.gd" id="1_xelri"]
+[ext_resource type="FontFile" uid="uid://dwfev8y84vg8l" path="res://Assets/Abaddon_Fonts_v1.2/Abaddon_Fonts_v1.2/Abaddon Bold.ttf" id="2_1bamb"]
+[ext_resource type="Texture2D" uid="uid://d34b8ynnbnx3s" path="res://Assets/Pixel background/Pixel background/64x64/3. Color/Picture/color_background_17.png" id="2_uah1q"]
+[ext_resource type="FontFile" uid="uid://b162afmb4xvsw" path="res://Assets/Abaddon_Fonts_v1.2/Abaddon_Fonts_v1.2/Abaddon Light.ttf" id="3_xelri"]
+[ext_resource type="Texture2D" uid="uid://bylucf1y8rrsf" path="res://Assets/Prinbles_YetAnotherIcons (beta) (9_7_2023)/Prinbles_YetAnotherIcons (beta) (9_7_2023)/svg/Black-Icon/Exit.svg" id="5_uah1q"]
+[ext_resource type="AudioStream" uid="uid://csq0mbfqr4ocd" path="res://Assets/music-loop-bundle-download_2024_q4/Sketchbook 2024-11-20.ogg" id="6_uah1q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xelri"]
+bg_color = Color(1, 0.723797, 0.854268, 1)
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_803yc"]
+bg_color = Color(0.140629, 0.628557, 0.895828, 1)
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uah1q"]
+corner_radius_top_left = 120
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+corner_radius_bottom_left = 120
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uah1q"]
+
+[sub_resource type="Environment" id="Environment_uah1q"]
+background_mode = 3
+background_canvas_max_layer = 1
+glow_enabled = true
+glow_intensity = 2.13
+glow_bloom = 0.17
+glow_hdr_threshold = 2.01
+glow_hdr_scale = 2.42
+glow_hdr_luminance_cap = 0.07
+adjustment_enabled = true
+adjustment_brightness = 0.74
+adjustment_contrast = 1.7
+adjustment_saturation = 1.18
+
+[node name="Credits" type="CanvasLayer"]
+script = ExtResource("1_xelri")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uah1q")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 48.0
+offset_right = 177.0
+offset_bottom = 183.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1bamb")
+theme_override_font_sizes/font_size = 120
+text = "Credits"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -528.0
+offset_top = 192.0
+offset_right = 528.0
+offset_bottom = 600.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.737193, 0.737193, 0.737193, 1)
+theme_override_colors/font_outline_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+theme_override_fonts/font = ExtResource("3_xelri")
+theme_override_font_sizes/font_size = 64
+text = "This game was made as part of Godot India Community Game Jam. All the assets used were either free or self made. Thank you for playing my very first Godot game! -Akhil_Krish"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 88.0
+offset_top = 40.0
+offset_right = 248.0
+offset_bottom = 152.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xelri")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_803yc")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uah1q")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uah1q")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uah1q")
+icon = ExtResource("5_uah1q")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Credits_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_uah1q")
+autoplay = true
+bus = &"Menu"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_uah1q")
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

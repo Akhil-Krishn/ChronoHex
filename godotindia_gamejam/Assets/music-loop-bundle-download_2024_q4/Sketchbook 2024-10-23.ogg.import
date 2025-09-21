@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rp47y0y5bt14"
+path="res://.godot/imported/Sketchbook 2024-10-23.ogg-46f8108ac3f4632a5202033b6eccb3b3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/music-loop-bundle-download_2024_q4/Sketchbook 2024-10-23.ogg"
+dest_files=["res://.godot/imported/Sketchbook 2024-10-23.ogg-46f8108ac3f4632a5202033b6eccb3b3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
